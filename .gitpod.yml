@@ -16,6 +16,7 @@ tasks:
     openMode: split-right
     command: |
       npm install
+      cd react
       npm run dev
 
   - name: Start DB
