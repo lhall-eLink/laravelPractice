@@ -21,12 +21,12 @@ export default function DefaultLayout() {
         })
     }
 
-    // useEffect(() => {
-    //     axiosClient.get('/user')
-    //       .then(({data}) => {
-    //          setUser(data)
-    //       })
-    //   }, [])
+    useEffect(() => {
+        axiosClient.get('/user')
+          .then(({data}) => {
+             setUser(data)
+          })
+      }, [])
 
     return (
         <div id="defaultLayout">

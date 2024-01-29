@@ -49,9 +49,8 @@ class AuthController extends Controller
     if ($request->user()) {
         /** @var \App\Models\User $user */
         $user = $request->user();
-
-        // Revoke the user's current access token
-        $user->tokens()->where('id', $user->currentAccessToken()->id)->delete();
+        $user->currentAccessToken()->delete();
+        return response('', 204);
     }
 
     return response('', 204);

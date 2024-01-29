@@ -14,10 +14,11 @@ tasks:
 
   - name: Install Node dependencies and run Vite
     openMode: split-right
-    command: |
-      npm install
+    init: |
       cd react
       npm run dev
+    command: |
+      npm install
 
   - name: Start DB
     openMode: split-right
